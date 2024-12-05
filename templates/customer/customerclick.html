@@ -11,7 +11,12 @@
       margin-top: 0px;
       margin-bottom: 0px;
     }
-
+    .customer{
+          margin-bottom: 0px;
+          background-image: url('{% static "image/homepage.webp" %}');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
     .jumbotron h1 {
       text-align: center;
     }
@@ -20,10 +25,14 @@
 
 </head>
 
-<body style="margin-bottom:0px; background-image: 'homepage.webp;'">
+<body>
   {% include "insurance/navbar.html" %}
   <br><br>
-  <div class="jumbotron text-center" style="margin-bottom:0px; background-color: transparent;">
+  <div class="jumbotron text-center customer" style="margin-bottom:0px; background-color: transparent;">
+    <br>
+    <br>
+    <br>
+    <br>
     <h1 class="display-4">Hello, Customer</h1>
     <p class="lead">Welcome to Insurance Management System</p>
     <hr class="my-4">
