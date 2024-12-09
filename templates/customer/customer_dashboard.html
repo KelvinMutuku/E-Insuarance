@@ -1,12 +1,13 @@
+<!DOCTYPE html>
 {% extends 'customer/customerbase.html' %}
 {% load widget_tweaks %}
 {% block content %}
-
-
-<head>
+{% load static %}
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
@@ -67,10 +68,14 @@
       left: 0px;
       right: 0px;
     }
+    .cus-dash{
+      background-image: url('{% static "image/livefree.jpg" %}');
+          background-size: cover;
+          background-repeat: no-repeat;
+    }
     </style>
-  </head>
-
-
+</head>
+<body class="cus-dash">
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-xl-3">
@@ -121,6 +126,6 @@
 <br><br><br><br><br><br><br><br><br><br>
 
 <script src="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-
-
+</body>
+</html>
 {% endblock content %}

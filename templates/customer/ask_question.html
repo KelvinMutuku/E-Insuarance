@@ -1,16 +1,19 @@
+<!DOCTYPE html>
 {% extends 'customer/customerbase.html' %}
 {% load widget_tweaks %}
 {% block content %}
-<head>
+{% load static %}
+<html lang="en">
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-       <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
   a:link {
         text-decoration: none;
       }
@@ -27,21 +30,30 @@
       transition: 0.5s;
       transition-property: color;
     }
+    .cus-dash{
+      background-image: url('{% static "image/livefree.jpg" %}');
+          background-size: cover;
+          background-repeat: no-repeat;
+    }
+    textarea{
+      background: transparent !important;
+    }
+    textarea::placeholder{
+      color: #080808 !important;
+    }
   </style>
 </head>
-<h2 style="text-align:center; color:blue;">ASK QUESTION</h2>
+<body class="cus-dash">
+  <h2 style="text-align:center; color:blue;">ASK QUESTION</h2>
 <form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
     {%csrf_token%}
     <div class="form-group">
       <label for="course_name">Problem</label>
       {% render_field questionForm.description class="form-control" placeholder="Describe your problem here" %}
-
-
     </div>
-    
-    
-
     <button type="submit" class="btn btn-primary">ASK</button>
   </form>
 <br><br><br><br>
 {% endblock content %}
+</body>
+</html>
