@@ -1,23 +1,34 @@
+<!DOCTYPE html>
 {% extends 'insurance/adminbase.html' %}
 {% load widget_tweaks %}
 {% block content %}
-<head>
+{% load static %}
+<html lang="en">
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
   a:link {
         text-decoration: none;
       }
-    
+      .adm-dash{
+      background-image: url('{% static "image/retirement.jpg" %}');
+          background-size: cover;
+          background-repeat: no-repeat;
+    }
+    label{
+      color: black;
+    }
   </style>
 </head>
-<h2 style="text-align:center; color:blue;">ADD POLICY</h2>
+<body class="adm-dash">
+  <h2 style="text-align:center; color:blue;">ADD POLICY</h2>
 <form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
     {%csrf_token%}
     <div class="form-group">
@@ -45,3 +56,5 @@
   </form>
 <br><br><br><br>
 {% endblock content %}
+</body>
+</html>

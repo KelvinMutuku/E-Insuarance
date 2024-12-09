@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 {% extends 'insurance/adminbase.html' %}
 {% load widget_tweaks %}
 {% block content %}
-
-
-<head>
+{% load static %}
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
@@ -67,10 +68,14 @@
       left: 0px;
       right: 0px;
     }
+    .adm-dash{
+      background-image: url('{% static "image/retirement.jpg" %}');
+          background-size: cover;
+          background-repeat: no-repeat;
+    }
     </style>
   </head>
-
-
+<body class="adm-dash">
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-xl-3">
@@ -121,3 +126,5 @@
 
 
 {% endblock content %}
+</body>
+</html>
