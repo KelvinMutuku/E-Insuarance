@@ -4,20 +4,26 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-
-
+<style>
+  body{
+    background-image: url('{% static "image/livefree.jpg" %}');
+          background-size: cover;
+          background-repeat: no-repeat;
+  }
+  input{
+    background: transparent;
+  }
+  textarea{
+    background: transparent;
+  }
+</style>
 </head>
-
 <body>
-
   {% include "insurance/navbar.html" %}
   <br><br>
 
   <center>
     <h3 class='alert alert-success'>Send Us Your Valuable Feedback !</h3>
-
     <form method="POST" autocomplete="off">
       <!-- Very Important csrf Token -->
       {% csrf_token %}
@@ -33,5 +39,4 @@
 
   {% include "insurance/footer.html" %}
 </body>
-
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load widget_tweaks %}
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -7,16 +8,24 @@
 
         form{
            margin: 50px; 
-          
         }
-
+        .csb{
+          background-image: url('{% static "image/homepage.webp" %}');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        input{
+          background: transparent !important;
+          outline-color: black;
+        }
+        input::placeholder{
+          color: black !important;
+        }        
     </style>
   </head>
-  <body>
+  <body class="csb">
     {% include "insurance/navbar.html" %}
  
-
-
 <br><br><br>
 <h3 style="text-align: center;color: red;">CUSTOMER SIGNUP</h3>
 <form method="POST" autocomplete="off" enctype="multipart/form-data">
@@ -65,7 +74,6 @@
 
     <button type="submit" class="btn btn-primary">Sign Up</button>
   </form>
-
 
 <br><br>
 {% include "insurance/footer.html" %}
