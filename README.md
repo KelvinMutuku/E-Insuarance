@@ -17,6 +17,59 @@ The E-Insurance Management Web Application is a digital solution designed to str
 * **Static Files**: WhiteNoise
 * **Production Server**: Gunicorn
 
+### Local Setup
+
+To run this project on your local machine, follow these steps:
+
+1. **Clone the Repository**:
+```bash
+git clone https://github.com/KelvinMutuku/E-Insuarance.git
+cd E-Insuarance
+
+```
+
+
+2. **Create a Virtual Environment**:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+```
+
+
+3. **Install Dependencies**:
+Make sure you have `Pillow` installed for image handling.
+```bash
+pip install -r requirements.txt
+
+```
+
+
+4. **Database Setup**:
+Run the migrations to initialize the SQLite database.
+```bash
+python manage.py migrate
+
+```
+
+
+5. **Create a Superuser**:
+This allows you to access the admin dashboard at `/admin`.
+```bash
+python manage.py createsuperuser
+
+```
+
+
+6. **Run the Application**:
+```bash
+python manage.py runserver
+
+```
+
+
+Visit `http://127.0.0.1:8000` in your browser.
+
 ### Deployment (Render)
 
 This project is configured to run on Render. If you are setting this up for the first time, follow these steps:
@@ -42,13 +95,6 @@ gunicorn insurancemanagement.wsgi:application
 ```
 
 
-
-### Local Setup
-
-1. Clone the repository.
-2. Install dependencies: `pip install -r requirements.txt`.
-3. Run migrations: `python manage.py migrate`.
-4. Start the server: `python manage.py runserver`.
 
 ### License
 
