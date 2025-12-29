@@ -24,7 +24,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('ls@!_(edqp*xy76kvbsst$07at(v^li*2&ew!^$8o(@wa6@a+$')
+# This looks for an environment variable named 'SECRET_KEY'
+# If it doesn't find it, it uses the string after the comma as a fallback
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-fallback-key-for-build-only')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
