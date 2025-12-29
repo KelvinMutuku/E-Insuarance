@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('ls@!_(edqp*xy76kvbsst$07at(v^li*2&ew!^$8o(@wa6@a+$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['Kentuchi254.pythonanywhere.com']
+ALLOWED_HOSTS = ['https://e-insuarance.onrender.com']
 
 
 # Application definition
